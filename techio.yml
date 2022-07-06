@@ -1,4 +1,24 @@
-title: Simple PHP Template
+title: PHP Dev Tools (for CodinGame or elsewhere)
 plan:
-- title: PHP Snippet
-  statement: statement.md
+- title: Intro
+  statement: markdowns/intro.md
+- title: Running your code locally (php)
+  statement: markdowns/local-php.md
+- title: Using a code repository (git, GitHub)
+  statement: markdowns/code-repo.md
+- title: Using an IDE (Visual Studio Code)
+  statement: markdowns/ide.md
+- title: Finding bugs (XDebug)
+  statement: markdowns/debug.md
+- title: Checking and fixing the coding style (PHP CodeSniffer, Php CS Fixer)
+  statement: markdowns/coding-stlye.md
+- title: Static code analysis to catch bugs before you run the code (PhpStan)
+  statement: markdowns/static-analysis.md
+- title: Using a dependency manager (Composer)
+  statement: markdowns/dependency-manager.md
+- title: Some great CodinGame-specific tools and sites by the community
+  statement: markdowns/cg-tools.md
+- title: Some great CodinGame-specific tools and web-pages by the community
+  statement: markdowns/cg-tools.md
+- title: Some other tools (PHPUnit, phpDocumentor, etc)
+  statement: markdowns/other-tools.md
