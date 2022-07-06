@@ -16,8 +16,6 @@ plan:
   statement: markdowns/static-analysis.md
 - title: Using a dependency manager (Composer)
   statement: markdowns/dependency-manager.md
-- title: Some great CodinGame-specific tools and sites by the community
-  statement: markdowns/cg-tools.md
 - title: Some great CodinGame-specific tools and web-pages by the community
   statement: markdowns/cg-tools.md
 - title: Some other tools (PHPUnit, phpDocumentor, etc)
