@@ -11,7 +11,7 @@ plan:
 - title: Finding bugs (XDebug)
   statement: markdowns/debug.md
 - title: Checking and fixing the coding style (PHP CodeSniffer, Php CS Fixer)
-  statement: markdowns/coding-stlye.md
+  statement: markdowns/coding-style.md
 - title: Static code analysis to catch bugs before you run the code (PhpStan)
   statement: markdowns/static-analysis.md
 - title: Using a dependency manager (Composer)
