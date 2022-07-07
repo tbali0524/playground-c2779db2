@@ -14,9 +14,11 @@ plan:
   statement: markdowns/coding-style.md
 - title: Static code analysis to catch bugs before you run the code (PhpStan)
   statement: markdowns/static-analysis.md
+- title: Some CodinGame-specific tools and web-pages by the community
+  statement: markdowns/cg-tools.md
 - title: Using a dependency manager (Composer)
   statement: markdowns/dependency-manager.md
-- title: Some great CodinGame-specific tools and web-pages by the community
-  statement: markdowns/cg-tools.md
-- title: Some other tools (PHPUnit, phpDocumentor, etc)
-  statement: markdowns/other-tools.md
+- title: Unit testing (PHPUnit)
+  statement: markdowns/unit-testing.md
+- title: Document generation (phpDocumentor)
+  statement: markdowns/document-generation.md

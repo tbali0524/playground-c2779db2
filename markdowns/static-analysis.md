@@ -32,4 +32,4 @@ TODO
 
 ## Coming next
 
-Using a dependency manager (Composer)
+Some CodinGame-specific tools and sites by the community

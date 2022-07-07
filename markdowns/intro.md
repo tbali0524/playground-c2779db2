@@ -1,6 +1,6 @@
 # PHP Dev Tools (for CodinGame or anywhere else)
 
-Note: This is work in progress!
+Note: This playground is work in progress!
 
 ## Intro and motivation
 
@@ -8,7 +8,7 @@ Note: This is work in progress!
 
 At `CG`, you don't really have to bother about setting up any local development environment: just start to write your code directly on the CG website using your browser, run the provided test cases there (for solo puzzles), and submit your solution when you feel ready.
 
-Despite this, it brings some advantages if you make the effort and spend the time to set up a local dev environment with some additional tooling - especially if you already have lots of puzzle solutions and some longer code as well. The experience will come in handy also in other projects, outside the context of `CodinGame`. Most of this playground will also apply elsewhere.
+Despite this, it brings some advantages if you make the effort and spend the time to set up a local dev environment with some additional tooling - especially if you already have lots of puzzle solutions and some longer code as well. The experience will also come in handy in other projects, outside the context of `CodinGame`. Most of the discussion is also applicable elsewhere.
 
 This `Tech.io` playground explores several tools to make your life easier as a developer. Topics we will cover:
 
@@ -18,11 +18,17 @@ This `Tech.io` playground explores several tools to make your life easier as a d
 * Finding bugs (_XDebug_)
 * Checking and fixing the coding style (_PHP CodeSniffer, Php CS Fixer_)
 * Static code analysis to catch bugs BEFORE you run the code (_PhpStan_)
-* Using a dependency manager (_Composer_)
-* Extra: Some great CodinGame-specific tools and web-pages by the community
-* Some other tools: unit testing, documentation generation, ... (_PHPUnit, phpDocumentor_)
+* Extra: Some great CodinGame-specific tools and websites by the community
 
-We will not discuss any puzzle or algorithm or the `PHP` language itself here, the topic is solely the dev environment and tooling. While the specific discussion is for `PHP`, most topics are applicable for other languages (although with a different toolset). My goal with this article is NOT to provide a full tutorial for each tool, I will just highlight them and show how _I_ use them with my CG activities. Links are provided for further study.
+We will also very briefly touch some tools that are less relevant for CodinGame puzzles, but can be important in other projects:
+
+* Using a dependency manager (_Composer_)
+* Unit testing (_PHPUnit_)
+* Generating documentation (_phpDocumentor_)
+
+My goal with this article is NOT to provide a full tutorial for each tool, I will really just highlight the basics (with an extra emphasis on __why__ to use them), and show how I personally use them with my CG activities. Links are provided for further study.
+
+I will not discuss any puzzle, algorithm, or the `PHP` language itself here, the topic is solely the dev environment and tooling. While the specific discussion is for `PHP`, most topics (especially the _Why?_ parts) are valid for other languages (although with a different specific toolset).
 
 ## Contributions welcome
 

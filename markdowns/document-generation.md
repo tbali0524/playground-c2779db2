@@ -1,14 +1,16 @@
-# Some other tools (_PHPUnit, phpDocumentor, etc_)
+# Document generation (_phpDocumentor_)
 
-There are many more dev tools beyond the scope of this short intro. Some of them are not very useful in the context of CodinGame puzzles, but very important in real projects. Here I just briefly mention them without details.
-
-## Unit testing with PHPUnit
+## Why
 
 TODO
 
-## Creating documentation with phpDocumentor
+## How
 
 TODO
+
+## Useful links
+
+* [phpDocumentor](https://www.phpdoc.org/)
 
 ## Bye
 

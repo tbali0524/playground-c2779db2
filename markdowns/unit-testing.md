@@ -1,29 +1,20 @@
-# Using a dependency manager (_Composer_)
+# Unit testing (_PHPUnit_)
 
 There are many more dev tools beyond the scope of this short intro. Some of them are not very useful in the context of CodinGame puzzles, but very important in real projects. Here I just briefly mention them without details.
 
-## Why?
+## Why
 
 TODO
 
-## Installing
-
-TODO
-
-## Basic configfile
-
-TODO
-
-## Creating custom scripts
+## How
 
 TODO
 
 ## Useful links
 
-* [Composer](https://getcomposer.org/)
-* [Packagist](https://packagist.org/)
-* [Phive](https://phar.io/)
+* [PHPUnit](https://phpunit.de/)
+* [PEST](https://pestphp.com/)
 
 ## Coming next
 
-Unit testing (PHPUnit)
+Document generation (phpDocumentor)
