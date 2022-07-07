@@ -1,5 +1,7 @@
 # Static code analysis to catch bugs before you run the code (_PhpStan_)
 
+![PHPStan logo](../pic/phpstan-logo.png)
+
 ## Why?
 
 TODO

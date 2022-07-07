@@ -1,5 +1,7 @@
 # Some CodinGame-specific tools and sites by the community
 
+![codingame logo](../pic/codingame-logo.png)
+
 The CG community created several great tools and websites that can help you during your CodinGame activity. The list below might be incomplete, please let me know if something worth mentioning is missing.
 
 ## Tools

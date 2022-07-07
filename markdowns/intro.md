@@ -15,7 +15,7 @@ This `Tech.io` playground explores several tools to make your life easier as a d
 * Running your code locally (_php_)
 * Using a code repository (_git, GitHub_)
 * Using an IDE (_Visual Studio Code_)
-* Finding bugs (_XDebug_)
+* Finding bugs (_Xdebug_)
 * Checking and fixing the coding style (_PHP CodeSniffer, Php CS Fixer_)
 * Static code analysis to catch bugs BEFORE you run the code (_PhpStan_)
 * Extra: Some great CodinGame-specific tools and websites by the community

@@ -2,6 +2,8 @@
 
 ## Why git?
 
+![git logo](../pic/git-logo.png)
+
 Using just the CG IDE in your browser is convenient: it takes care of saving your code, you can even access all your earlier submissions via the `Results / History` menu. However, you should not rely solely on this. Have a local collection of all your code you have written. Moreover, having just a bunch of files in some folders on your hard drive quickly becomes unmanagable, so use a _source code management_ tool (also known as a _version control system_). While there are (were?) other tools as well, `git` became a de-facto monopoly in this field.
 Benefits:
 
@@ -10,6 +12,8 @@ Benefits:
 * Sometimes we screw up things and need to revert changes. With `git` it is very easy to turn back the wheel of time to any point when you commited code into the repository. You never need to worry of overwriting or modifying something you regret later.
 
 ## Why GitHub?
+
+![octocat](../pic/octocat.png)
 
 While having a local version control is fine, if you loose your filesystem, you are still busted. GitHub is the largest free code hosting platform in the cloud. (But not the only one, so feel free to use [GitLab](https://about.gitlab.com/), [BitBucket](https://bitbucket.org/), etc instead.)
 

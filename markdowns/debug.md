@@ -1,4 +1,6 @@
-# Finding bugs (_XDebug_)
+# Finding bugs (_Xdebug_)
+
+![Xdebug logo](../pic/xdebug-logo.png)
 
 ## Why?
 

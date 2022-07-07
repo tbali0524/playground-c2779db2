@@ -8,7 +8,7 @@ plan:
   statement: markdowns/code-repo.md
 - title: Using an IDE (Visual Studio Code)
   statement: markdowns/ide.md
-- title: Finding bugs (XDebug)
+- title: Finding bugs (Xdebug)
   statement: markdowns/debug.md
 - title: Checking and fixing the coding style (PHP CodeSniffer, Php CS Fixer)
   statement: markdowns/coding-style.md
