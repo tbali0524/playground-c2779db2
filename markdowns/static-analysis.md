@@ -10,19 +10,36 @@ TODO
 
 TODO
 
-## Using phpcs
+## Custom configfile
 
 TODO
 
-## Custom configfile for phpstan
+An example `phpstan.neon` config file.
 
-TODO
+```yml
+parameters:
+    level: 9
+    phpVersion: 70300
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+    tmpDir: .tools/phpstan
+    reportUnmatchedIgnoredErrors: false
+    paths:
+        - .
+    excludePaths:
+        - .git
+        - .temp
+        - .tools
+        - .vscode
+        - vendor
+        - clash
+        - codegolf
+        - contest
+    dynamicConstantNames:
+        - DEBUG
+        - PERF_LOG
+```
 
-## Using php-cs-fixer
-
-TODO
-
-## Custom configfile for php-cs-fixer
+## Usage
 
 TODO
 

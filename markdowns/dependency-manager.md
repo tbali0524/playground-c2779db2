@@ -28,4 +28,4 @@ TODO
 
 ## Coming next
 
-Unit testing (PHPUnit)
+Unit testing (_PHPUnit_)

@@ -38,7 +38,7 @@ git config --global init.defaultBranch main
 
 Registration on [GitHub](https://www.github.com/) is quite straightforward and you are good to go. Besides the `Free` plan they have a paid `Pro` service, but we won't need it. GitHub also provides a [command line tool](https://cli.github.com/), but its usage is optional and not really essential.
 
-## Setting up you 'CG solutions' code repo
+## Setting up a code repo for your CG solutions
 
 Usually one should make a separate git repo for every project, keeping only the project-related files together. However, you can have hundreds of CG solutions (1 file each) making separate repo would be silly. I have a single repo for all my php CG solutions (600+ files), plus another repo for all the other languages (26 languages with typically ~40 simple solutions each). With such number of files keeping things organized is a must. For example I use directories per CG game type and per difficulty with a strict naming convention also on filenames:
 
@@ -55,7 +55,7 @@ git init
 * Sign in to your `github` account  and [create a new repo](https://github.com/new). Preferably choose the same name for the repo as the local directory name you have chosen above.
 * __For CG puzzles: make sure sure you set your repo to be 'private'__.
 * Now connect your local repo with the github repo yopu created:
-    * At first time you need to provide your github credentials. Later you don't need to type in passwords or access tokens if usinf the same machine.
+    * At first time you need to provide your github credentials. Later you don't need to type in passwords or access tokens if using the same machine.
 
 ```bash
 git remote add origin "https://github.com/your-github-profile-name/reponame.git"
@@ -66,12 +66,31 @@ git status
 * to make sure everything is OK, let's create php source file in the repo directory and commit it to the repo.
 
 ```bash
-git git add -A
-git commit -m "my first commit"
+git add -A
+git commit -m "initial commit"
 git push origin main
+git status
 ```
 
 * Now if you visit your account on github, the new php file should appear under the repository you created.
+
+## Excluding some files from your repo
+
+There can be files that you don't want to commit into your repository, especially if they are changing frequently.
+For example, in the previous chapter we redirected the output of our local php run into a `output_01.txt` file.
+Other example: we will introduce some dev tools in later chapters that create a cache file to speed up subsequent runs.
+You can add a `.gitignore` file to your repo directory, listing all the patterns to exclude.
+For example:
+
+```bash
+/.temp/
+/.tools/phpstan/
+/.tools/.php-cs-fixer.cache
+/.tools/.phpcs.cache
+/.tools/*.txt
+/vendor/
+/**/output*.txt
+```
 
 ## Useful links
 

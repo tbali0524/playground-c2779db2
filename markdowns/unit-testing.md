@@ -25,4 +25,4 @@ TODO
 
 ## Coming next
 
-Document generation (phpDocumentor)
+Document generation (_phpDocumentor_)

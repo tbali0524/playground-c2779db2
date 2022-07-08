@@ -38,4 +38,4 @@ The CG community created several great tools and websites that can help you duri
 
 ## Coming next
 
-Using a dependency manager (Composer)
+Using a dependency manager (_Composer_)

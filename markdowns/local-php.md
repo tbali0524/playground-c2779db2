@@ -34,7 +34,7 @@ opcache.jit=tracing
 opcache.revalidate_freq=1
 ```
 
-While unrelated to JIT, I also recommended to increase the memory available to php, or even to set it to `unlimited` with `memory_limit=-1`
+While unrelated to JIT, I also recommended to increase the memory available to php, or even to set it to unlimited with `memory_limit=-1`
 
 You can check if JIT is working by running:
 
@@ -55,7 +55,7 @@ php my_solution.php < input_01.txt > output_01.txt 2>&1
 
 ...and check the result (what your code wrote to the standard output) in `output_01.txt`. Note: adding `2>&1` redirects also the error log to the same file. To run multiple test cases after each other, you can make a small batch file or shell script by copying and editing the above command line with different filenames.
 
-* Beware: When creating a local test case input file, make sure to save it with Linux line ending (LF) instead of the Windows default (CRLF), because otherwise the input parsing might not work correctly.
+* Beware: When creating a local test case input file, make sure to save it with Linux line ending (`LF`) instead of the Windows default (`CRLF`), because otherwise the input parsing might not work correctly.
 
 ## Useful links
 
