@@ -4,17 +4,17 @@
 
 ## Why?
 
-A good IDE (integrated development environment) can boost your productivity tremendously. After getting used to its advanced editing features, syntax highlighing, intelligent code completion, and the debugging capabilities, it is very hard to go back to a simple ascii editor. While in previous chapter we used `git` from the command line, the built-in git support makes it unnecessery to remember git command syntax.
+A good IDE (= integrated development environment) can boost your coding productivity tremendously. After getting used to its advanced editing features, syntax highlighting, intelligent code completion, and debugging capabilities, you won't want to go back to a simple ascii editor. While in the previous chapter we used `git` from the command line, the built-in git support makes it unnecessary to remember the git command syntax.
 
 ## Installing and using VS Code
 
 A proper `VS Code` tutorial is beyond the scope of this article. Just grab it from its [website](https://code.visualstudio.com/) and install. There are good Getting Started guides available, but basic usage is quite intuitive.
-If you start it with `code .` from the directory you created for your git repo, the explorer will show all your files in your repo.
+If you start it with `code .` from the directory you created for your git repo, its explorer tab will show all your files within your repo.
 
 ## Extensions
 
 One of the main strength of `VS Code` lies in the huge number of extensions available.
-Some of the standalone dev tools I will cover in a later chapter also have an extension that integrates them better with the IDE.
+Most of the standalone dev tools I will cover in a later chapter also have extensions that integrate them better with the IDE.
 Some useful extensions for php developers:
 
 * [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client) by Ben Mewburn

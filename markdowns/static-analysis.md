@@ -46,8 +46,8 @@ TODO
 ## Useful links
 
 * [PhpStan](https://phpstan.org/)
-* [Psalm](https://psalm.dev/)
-* [PHP Mess Detector](https://phpmd.org/)
+* [Psalm](https://psalm.dev/), another popular static analyzer. You must use Composer though.
+* [PHP Mess Detector](https://phpmd.org/), another analyzer.
 
 ## Coming next
 

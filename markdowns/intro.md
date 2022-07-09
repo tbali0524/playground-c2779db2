@@ -20,7 +20,7 @@ This `Tech.io` playground explores several tools to make your life easier as a d
 * Static code analysis to catch bugs BEFORE you run the code (_PhpStan_)
 * Extra: Some great CodinGame-specific tools and websites by the community
 
-We will also very briefly touch some tools that are less relevant for CodinGame puzzles, but can be important in other projects:
+We will also very briefly touch some tools that are less relevant for CodinGame puzzles, but it is good to know them for other projects:
 
 * Using a dependency manager (_Composer_)
 * Unit testing (_PHPUnit_)

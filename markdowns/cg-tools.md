@@ -10,7 +10,7 @@ The CG community created several great tools and websites that can help you duri
     * Chrome extension to sync local IDE with the CG code editor
 * [CG Spunk](https://github.com/danBhentschel/CGSpunk) by [player_one](https://www.codingame.com/profile/fefb3b0a360d9451bde5553900470e2d677255)
     * Chrome extension with Swap opponents and Batch Run functionality for multiplayer games
-* [CG Benchmark](https://github.com/s-vivien/CGBenchmark) ny [Neumann](https://www.codingame.com/profile/6db919e4cba28b42e343a3f3d36d2768260153)
+* [CG Benchmark](https://github.com/s-vivien/CGBenchmark) by [Neumann](https://www.codingame.com/profile/6db919e4cba28b42e343a3f3d36d2768260153)
     * a Java tool to queue batches of matches on any multiplayer game
 * [CG-BrutalTester](https://github.com/dreignier/cg-brutaltester) by [Magus](https://www.codingame.com/profile/1724dffd64c8c26c9fa9a189691387b5760508)
     * a Java local tool to simulate the CodinGame multiplayer arena
@@ -34,7 +34,7 @@ The CG community created several great tools and websites that can help you duri
     * Comparing standings in each multis for several players
 * [CG leadergraph](https://dbdr.github.io/cg/) by [dbdr](https://www.codingame.com/profile/a44c2c75eb5da8d5e52184eaa92342813628822)
     * graphical CP leaderboard for top200 playes - _currently broken_
-* [Chat history](https://cg.spdns.eu/wiki/Main_Page) by `???` _(sorry, I don't know)_
+* [Chat history](https://cg.spdns.eu/wiki/Main_Page) by `???` _(sorry, I don't know who is the culprit)_
 
 ## Coming next
 
