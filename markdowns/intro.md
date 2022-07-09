@@ -28,7 +28,7 @@ We will also very briefly touch some tools that are less relevant for CodinGame 
 
 My goal with this article is NOT to provide a full tutorial for each tool, I will really just highlight the basics (with an extra emphasis on __why__ to use them), and show how I personally use them with my CG activities. I try to be beginner-friendly (professional php developers are surely using these or similar other tools already), but to limit article length, I cannot cover all the details of an installation and usage. Links are provided for further study.
 
-I will not discuss any puzzle, algorithm, or the `PHP` language itself here, the topic is solely the dev environment and tooling. While the specific discussion is for `PHP`, most topics (especially the _Why?_ parts) are valid for other languages (although with a different toolset).
+I will not discuss any puzzle, algorithm, or the `PHP` language itself here, the topic is solely the dev environment and tooling. While the specific discussion is for PHP, most topics (especially the _Why?_ parts) are valid for other languages (although with a different toolset).
 
 ## Contributions welcome
 
@@ -39,5 +39,3 @@ This playground is far from complete. If you have suggestions for improvements, 
 * or just leave a comment here on `Tech.io`.
 
 ## Let's get started!
-
-How to run your code locally?

@@ -38,4 +38,5 @@ The CG community created several great tools and websites that can help you duri
 
 ## Coming next
 
-Using a dependency manager (_Composer_)
+This is the end of the `Codingame` specific part of this playground.
+However, there are some dev tools so important in the PHP community that I just could not skip them completely.

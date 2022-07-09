@@ -19,13 +19,13 @@ Depending on your OS, `php` might come already preinstalled, although it might b
 * For `Windows` you can just download and unzip the latest release from the the [core php site](https://windows.php.net/download). You shall add its directory to the `PATH`, so you can run `php` from anywhere.
 * It might be more convenient to use a pre-packaged version. I use [XAMPP](https://www.apachefriends.org/) that contains some additional useful stuff such as a web server and a database besides PHP itself (not needed for CodinGame puzzles though.) There are other similar packages as well.
 * `Mac` users: I have no experience with it, so just google it...
-* You can also use docker containers. Again, google is your friend.
+* Using docker containers is also possible.
 
-## Optional: configuring JIT
+## Optional: enabling JIT
 
 The default config file php comes with works fine, but the JIT compiler (available from `v8.0`) is turned off. While not a huge boost for typical web applications, for a computing-intensive CG puzzle the speedup is usually substantial: in my experience 2x to 3x.
 
-To enable JIT, just uncommment / add / modify the following lines in your `php.ini` file:
+To enable JIT, just uncomment / add / modify the following lines in your `php.ini` file:
 
 ```ini
 zend_extension=opcache
@@ -55,9 +55,13 @@ For example, after saving the input to `input_01.txt`, run the test case with:
 php my_solution.php < input_01.txt > output_01.txt 2>&1
 ```
 
-...and check the result (what your code wrote to the standard output) in `output_01.txt`. Note: adding `2>&1` redirects also the error log to the same file. To run multiple test cases after each other, you can make a small batch file or shell script by copying and editing the above command line with different filenames.
+...and check the result (what your code wrote to the standard output) in `output_01.txt`.
 
-* _Beware:_ When creating a local test case input file, make sure to save it with Linux line ending (`LF`) instead of the Windows default (`CRLF`), otherwise the input parsing might not work correctly.
+Note: by adding `2>&1` above we redirected the error log also to the same file.
+
+To run multiple test cases after each other, you can make a small batch file or shell script by copying and editing the above command line with different filenames.
+
+* _Beware:_ When creating a local test case input file, make sure to save it with Linux line ending `LF` instead of the Windows default `CRLF`, otherwise the input parsing might not work correctly.
 
 ## Useful links
 
@@ -66,4 +70,4 @@ php my_solution.php < input_01.txt > output_01.txt 2>&1
 
 ## Coming next
 
-Using a code repository (_git, GitHub_)
+Okay, we run our `php` code locally. But where shall we store our code?

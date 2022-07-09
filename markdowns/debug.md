@@ -24,9 +24,9 @@ As we have already installed `php` and `VS Code` locally, by adding `Xdebug` we 
 
 Again, I will not go into full details. The necessary steps are depending on OS, but [xdebug website](https://xdebug.org/docs/install) has detailed documentation. The following steps are valid only for my `XAMPP for Windows` installation:
 
-* Download the latest Windows, 64-bit binary from the [download page](https://xdebug.org/download)
-    * match with the major version of your local php installation, e.g. `8.1`
-    * for XAMPP, use the thread-safe (TS) build
+* Download the latest Windows, 64-bit binary from the [download page](https://xdebug.org/download).
+    * Match with the major version of your local php installation, e.g. `8.1`.
+    * For XAMPP, use the thread-safe (TS) build.
 * Rename this file to `php_xdebug.dll` (so that we don't need to change the reference in the config file for every minor version update).
 * Move the file to the `/ext` subdirectory of your local php installation (in my case to `c:\xampp\php\ext\`).
 * Add these settings to your `php.ini` file:
@@ -41,7 +41,7 @@ xdebug.log = "C:\xampp\tmp\xdebug.log" ; or your tmp directory
 xdebug.idekey = VSCODE
 ```
 
-In a previous chapter I recommended to enable JIT. Unfortunately JIT and Xdebug does not work well together, so I recommend using 2 separate `php.ini` files:
+In a previous chapter I recommended to enable JIT. Unfortunately JIT and Xdebug does not work well together, so I recommend using TWO separate `php.ini` files:
 
 The default `php.ini` is used when I don't want to debug, just to run the code (as fast as possible):
 
@@ -50,14 +50,14 @@ zend_extension=opcache
 ; zend_extension=xdebug
 ```
 
-On the contrary, `php-debug.ini` has opcache commented out and xdebug enabled. Otherwise the 2 ini files are identical.
+On the other hand, `php-debug.ini` has opcache commented out and xdebug enabled. Otherwise the two ini files are identical.
 
 ```ini
 ; zend_extension=opcache
 zend_extension=xdebug
 ```
 
-I also have a `phpd.bat` batch file in a directory in my `PATH`, together with the ini file:
+I also have a `phpd.bat` batch file in a directory that is in my `PATH`, together with this ini file:
 
 ```bat
 @echo off
@@ -74,7 +74,7 @@ So when I need to debug, I can just type `phpd` instead of `php`.
     * The port should match what you set for `xdebug.client_port` in the `php.ini` file, e.g. `9003`
 * Set a breakpoint by clicking on the left side of a source line.
     * A red circle should appear.
-    * _Beware:_ if this line is in the middle of the loop, your run will pause in every iteration. You can set up a conditional breakpoint, eg. pause only if the loop variable equals a sepcific value.
+    * _Beware:_ if this line is in the middle of the loop, your run will pause in every iteration. You can set up a conditional breakpoint, e.g. pause only if the loop variable equals a specific value.
 * Select `Run` / `Start debugging` menu, choose the "Listen for Xdebug" config created earlier.
     * The status line at the bottom of the VS Code window changes its color, showing it is now listening to a debug event from Xdebug.
 * Open a terminal windows (either within VS Code or separately).
@@ -94,4 +94,4 @@ phpd my_solution.php < input_01.txt > output_01.txt 2>&1
 
 ## Coming next
 
-Checking and fixing the coding style (_PHP CodeSniffer, Php CS Fixer_)
+_"De gustibus non est disputandum"_ (There is no accounting for taste). But did the Romans think about coding styles?

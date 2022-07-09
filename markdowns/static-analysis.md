@@ -10,7 +10,7 @@ TODO
 
 TODO
 
-## Custom configfile
+## Creating a configuration file
 
 TODO
 
@@ -39,6 +39,8 @@ parameters:
         - PERF_LOG
 ```
 
+Having this file in my project folder I can run `phpstan --verbose`
+
 ## Usage
 
 TODO
@@ -46,8 +48,10 @@ TODO
 ## Useful links
 
 * [PhpStan](https://phpstan.org/)
-* [Psalm](https://psalm.dev/), another popular static analyzer. You must use Composer though.
+* [Psalm](https://psalm.dev/), another popular static analyzer. You must use `Composer` though.
 * [PHP Mess Detector](https://phpmd.org/), another analyzer.
+* [Clean Code PHP](https://github.com/jupeter/clean-code-php), a collection of principles on "producing readable, reusable, and refactorable software in PHP".
+* [PHP The Right Way](https://phptherightway.com/), a very thorough quick reference for PHP best practices.
 
 ## Coming next
 

@@ -131,6 +131,8 @@ As an example, here is a possible phpcs config file:
 </ruleset>
 ```
 
+Having this file in my project folder I can simply run `phpcs` without any command line arguments.
+
 ## Using Php CS Fixer
 
 ![PHP CS Fixer logo](../pic/php-cs-fixer-logo.png)
@@ -159,7 +161,7 @@ php-cs-fixer fix --rules="@PSR12,@PHP73Migration" --show-progress=dots --ansi --
 
 Similarly to `phpcs`, you can also save your configuration for `php-cs-fixer`. In this case this is not an XML file, but a short php script, which shall be named `.php-cs-fixer.dist.php` or `.php-cs-fixer.php`.
 
-Here is a possible example, check out the [documentation](https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc) for more details. The example below also includes some 'risky' rules, such as adding a `declare(strict_types=1);` line if it was missing. Such change alters behaviour, so should be used very catiously.
+Here is a possible example, check out the [documentation](https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc) for more details. The example below also includes some 'risky' rules, such as adding a `declare(strict_types=1);` line if it was missing. Such change alters behaviour, so should be used very cautiously.
 
 ```php
 <?php
@@ -196,6 +198,12 @@ return (new PhpCsFixer\Config())
 ;
 ```
 
+This config file tells which folders and files to include/exclude, and which rules to apply. I still need to apply some command line arguments:
+
+```bat
+php-cs-fixer fix --dry-run --show-progress=dots --ansi --diff -vv .
+```
+
 ## Checking and fixing the coding style in `VS Code`
 
 While in the examples above we used the tools from the command line, both `phpcs` and `php-cs-fixer` have good VS Code extensions (_see the 'VS Code' chapter of this playground_). After enabling and configuring the extension, VS Code can check (and fix) the coding style within the editor.
@@ -210,4 +218,4 @@ While in the examples above we used the tools from the command line, both `phpcs
 
 ## Coming next
 
-Static code analysis to catch bugs before you run the code (_PhpStan_)
+Some clever tools can check much more than just the coding style.

@@ -15,6 +15,7 @@ If you start it with `code .` from the directory you created for your git repo, 
 
 One of the main strength of `VS Code` lies in the huge number of extensions available.
 Most of the standalone dev tools I will cover in a later chapter also have extensions that integrate them better with the IDE.
+
 Some useful extensions for php developers:
 
 * [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client) by Ben Mewburn
@@ -29,8 +30,8 @@ Please note that some extensions need additional configuration to work correctly
 ## Useful links
 
 * [VS Code](https://code.visualstudio.com/)
-* [PhpStorm](https://www.jetbrains.com/phpstorm/), the most popular IDE for PHP, unfortunatelly it is not free.
+* [PhpStorm](https://www.jetbrains.com/phpstorm/), another great IDE, still the most popular one for PHP. Unfortunatelly it is not free.
 
 ## Coming next
 
-Finding bugs (_Xdebug_)
+it happens even to the best of us that the code we write has some bugs. How to find and correct them the fastest?
