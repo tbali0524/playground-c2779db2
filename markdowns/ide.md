@@ -8,7 +8,7 @@ A good IDE (= integrated development environment) can boost your coding producti
 
 ## Installing and using VS Code
 
-A proper `VS Code` tutorial is beyond the scope of this article. Just grab it from its [website](https://code.visualstudio.com/) and install. There are good Getting Started guides available, but basic usage is quite intuitive.
+A proper `Visual Studio Code` tutorial is beyond the scope of this article. Just grab it from its [website](https://code.visualstudio.com/) and install. There are good Getting Started guides available, but basic usage is quite intuitive.
 If you start it with `code .` from the directory you created for your git repo, its explorer tab will show all your files within your repo.
 
 ## Extensions

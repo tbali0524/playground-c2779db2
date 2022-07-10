@@ -36,7 +36,12 @@ The CG community created several great tools and websites that can help you duri
     * graphical CP leaderboard for top200 playes - _currently broken_
 * [Chat history](https://cg.spdns.eu/wiki/Main_Page) by `???` _(sorry, I don't know who is the culprit)_
 
+## Useful links
+
+* [Apps & Tools section on the CG Forum](https://www.codingame.com/forum/c/apps-tools/32)
+
 ## Coming next
 
 This is the end of the `Codingame` specific part of this playground.
-However, there are some dev tools so important in the PHP community that I just could not skip them completely.
+
+However, there are some dev tools so important in the PHP community that I just could not skip them completely. So let's carry on!

@@ -16,14 +16,14 @@ This `Tech.io` playground explores several tools to make your life easier as a d
 * Using a code repository (_git, GitHub_)
 * Using an IDE (_Visual Studio Code_)
 * Finding bugs (_Xdebug_)
-* Checking and fixing the coding style (_PHP CodeSniffer, Php CS Fixer_)
-* Static code analysis to catch bugs BEFORE you run the code (_PhpStan_)
+* Checking and fixing the coding style (_PHP CodeSniffer, PHP CS Fixer_)
+* Static code analysis to catch bugs BEFORE you run the code (_PHPStan_)
 * Extra: Some great CodinGame-specific tools and websites by the community
 
 We will also very briefly touch some tools that are less relevant for CodinGame puzzles, but it is good to know them for other projects:
 
 * Using a dependency manager (_Composer_)
-* Unit testing (_PHPUnit_)
+* Unit testing (_PHPUnit, PEST_)
 * Generating documentation (_phpDocumentor_)
 
 My goal with this article is NOT to provide a full tutorial for each tool, I will really just highlight the basics (with an extra emphasis on __why__ to use them), and show how I personally use them with my CG activities. I try to be beginner-friendly (professional php developers are surely using these or similar other tools already), but to limit article length, I cannot cover all the details of an installation and usage. Links are provided for further study.

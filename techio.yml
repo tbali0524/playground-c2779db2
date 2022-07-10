@@ -18,7 +18,7 @@ plan:
   statement: markdowns/cg-tools.md
 - title: Using a dependency manager (Composer)
   statement: markdowns/dependency-manager.md
-- title: Unit testing (PHPUnit)
+- title: Unit testing (PHPUnit, PEST)
   statement: markdowns/unit-testing.md
-- title: Document generation (phpDocumentor)
-  statement: markdowns/document-generation.md
+- title: Generating documentation (phpDocumentor)
+  statement: markdowns/doc-generating.md

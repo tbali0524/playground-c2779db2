@@ -1,4 +1,4 @@
-# Checking and fixing the coding style (_PHP CodeSniffer, Php CS Fixer_)
+# Checking and fixing the coding style (_PHP CodeSniffer, PHP CS Fixer_)
 
 ## Why?
 
@@ -20,24 +20,24 @@ There are several coding style guides available for php:
 
 _Note: PSR stands for "PHP Standards Recommendations". PSRs are e-facto standards maintained by [PHP-FIG](https://www.php-fig.org/) (Framework Interoperability Group). Besides the coding guides above, there are several standardized interfaces for some common use-cases, specification for autoloading classes, etc._
 
-All the tools discussed later will allow you to tweak the rules and compose your own coding style ruleset. However, it is usually not worth the time. The above rulesets are there, so you don't have to spend too much time on styling decisions.
+It is good if you are somewhat familiar with your chosen coding style, but you don't have to know all its rules. There are tools that can check (and even automatically fix) your code. In this playground we will check out the two most popular tools for dealing with PHP coding standards: `PHP CodeSniffer` and `PHP CS Fixer`.
 
-Also, it doesn't care too much exactly which ruleset you use, just be consistent. But `PSR-12` is a good bet in most cases.
+It doesn't care too much exactly which ruleset you use, just be consistent. But `PSR-12` is a good bet in most cases. Both tools discussed allows you to tweak the rules and compose your own coding style ruleset. However, it is usually not worth the time. The above rulesets are there, so you don't have to spend too much time on styling decisions.
 
 ## Alternative ways of installing a PHP dev tool
 
-Before we go into details about the tools to check and fix the coding style, let's see how can we install a php dev tool _in general_. This will apply also for the tools to be introduced in later chapters.
+Before we go into details about the tools to check and fix the coding style, let's see how can we install a php dev tool _in general_. This will be valid also for the tools to be introduced in later chapters.
 
-* If using a dependency manager (`composer`), you can install the tool as a dev-environment-only dependency into your project. It will appear in the `/vendor` subdirectory. (We added this directory name to `.gitignore` exactly to prevent any third-party packages to go into your repository.) However, this approach is not ideal:
+* If using a dependency manager (`Composer`), you can install the tool as a dev-environment-only dependency into your project. It will appear in the `/vendor` subdirectory. (We added this directory name to `.gitignore` exactly to prevent any third-party packages to go into your repository.) However, this approach is not ideal:
     * You will have multiple copies of the same tools, one in each of your projects.
     * These tools have also their own package dependencies, which might collide with your own dependencies. (This is not a concern with CodinGame puzzles, where you CANNOT use any third party packages.)
-* Another option is to install the tools with `composer` as a _global_ package.
+* Another option is to install the tools with `Composer` as a _global_ package.
     * If doing this, then at least you have only a single copy per tool.
     * Different tools might still depending on different versions of the same package.
 * Download the tool as a single __PHAR__ file. Phar means 'php archive', it contains everything needed to run the program (packages, etc). You just pass the phar file to the php interpreter just as you would do with a single php script.
 * Use [PHIVE](https://phar.io/), the _PHAR Installation and Verification Environment_ to manage your tools. It makes downloading and updating the phar files easier.
 
-Most dev tools' own documantation recommend NOT to install them with `composer`, but to use the PHAR version (either downloading manually or with `Phive`).
+Most dev tools' own documantation recommend NOT to install them with `composer`, but to use the PHAR version (either downloading manually or with `PHIVE`).
 
 ## Installing PHP CodeSniffer
 
@@ -49,7 +49,7 @@ For all the php dev tools I use, I did the following, but feel free to use a dif
 
 * Create a `c:\devtools` directory and add it to the `PATH`.
 * Download the phar file and move it to the above directory:
-    * _Note: Latest Windows 10/11 already includes curl._
+    * _Note: Latest Windows 10/11 already includes curl. If yours not any download method should  work, even a browser._
 
 ```bash
 curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
@@ -60,7 +60,7 @@ curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 ```bat
 @echo off
 setlocal DISABLEDELAYEDEXPANSION
-SET BIN_TARGET=%~dp0/phpcs.phar
+set BIN_TARGET=%~dp0/phpcs.phar
 php "%BIN_TARGET%" %*
 ```
 
@@ -131,15 +131,15 @@ As an example, here is a possible phpcs config file:
 </ruleset>
 ```
 
-Having this file in my project folder I can simply run `phpcs` without any command line arguments.
+Having this file in your project directory, you can simply run `phpcs` without any command line arguments.
 
-## Using Php CS Fixer
+## Using PHP CS Fixer
 
 ![PHP CS Fixer logo](../pic/php-cs-fixer-logo.png)
 
-[Php CS Fixer](https://cs.symfony.com/) is another popular solution to check and fix the coding style. It has similar features to PHP CodeSniffer, so I will be brief.
+[PHP Coding Standards Fixer](https://cs.symfony.com/) is another popular solution to check and fix the coding style. It has similar features to PHP CodeSniffer, so I will be brief.
 
-* Again as discussed above, there are multiple ways to install the tool. I download the `phar` file, move it to my `devtools` directory, and create a `php-cs-fixer.bat` shortcut:
+* Again, as discussed above, there are multiple ways to install the tool. I download the `phar` file, move it to my `devtools` directory, and create a `php-cs-fixer.bat` shortcut:
 
 ```bash
 curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer.phar
@@ -161,7 +161,11 @@ php-cs-fixer fix --rules="@PSR12,@PHP73Migration" --show-progress=dots --ansi --
 
 Similarly to `phpcs`, you can also save your configuration for `php-cs-fixer`. In this case this is not an XML file, but a short php script, which shall be named `.php-cs-fixer.dist.php` or `.php-cs-fixer.php`.
 
-Here is a possible example, check out the [documentation](https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc) for more details. The example below also includes some 'risky' rules, such as adding a `declare(strict_types=1);` line if it was missing. Such change alters behaviour, so should be used very cautiously.
+Here is a possible example, check out the [documentation](https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc) for more details.
+
+* It includes some 'risky' rules, such as adding a `declare(strict_types=1);` line if it was missing. Such change alters behaviour and CAN break your code, so should be used very cautiously.
+
+* On top of `PSR-12` it includes the much more opinionated `Symfony` coding standard, however I overrode some rules manually.
 
 ```php
 <?php
@@ -182,13 +186,26 @@ $finder = PhpCsFixer\Finder::create()
     ->notPath('optim/community/optim_com_cgfunge_prime.php')    // not a real php code
 ;
 return (new PhpCsFixer\Config())
+    // available rulesets and rules: https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc
     ->setRules([
         '@PSR12' => true,
         '@PHP81Migration' => true,
         '@PHP80Migration:risky' => true,    // this also needs: ->setRiskyAllowed(true)
+        '@Symfony' => true,
+
+        // override some @PHPxxMigration rules, because CG supports only php v7.3
         'assign_null_coalescing_to_coalesce_equal' => false, // override @PHP81Migration, ??= requires php v7.4
-        'use_arrow_functions' => false,     // override '@PHP80Migration:risky, => fn() requires php v7.4
-        'modernize_strpos' => false,        // override '@PHP80Migration:risky, str_contains() requires php v8.0
+        'use_arrow_functions' => false,     // override @PHP80Migration:risky, => fn() requires php v7.4
+        'modernize_strpos' => false,        // override @PHP80Migration:risky, str_contains() requires php v8.0
+
+        // override some @Symfony rules
+        'binary_operator_spaces' => ['operators' => ['=' => null, '=>' => null, 'and' => null, 'or' => null]],
+        'blank_line_before_statement' => false,
+        'class_attributes_separation' => false,
+        'concat_space' => ['spacing' => 'one'],
+        'increment_style'=> ['style' => 'post'],
+        'phpdoc_to_comment' => false,
+        'yoda_style' => false,
     ])
     ->setRiskyAllowed(true)
     ->setCacheFile(__DIR__ . '/.tools/.php-cs-fixer.cache')
@@ -198,7 +215,7 @@ return (new PhpCsFixer\Config())
 ;
 ```
 
-This config file tells which folders and files to include/exclude, and which rules to apply. I still need to apply some command line arguments:
+This config file tells which folders and files to include/exclude, and which rules to apply. We still need to apply some command line arguments:
 
 ```bat
 php-cs-fixer fix --dry-run --show-progress=dots --ansi --diff -vv .

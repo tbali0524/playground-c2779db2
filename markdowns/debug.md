@@ -11,6 +11,7 @@ If you start any puzzle in CodinGame, the starter code contains the line suggest
 ```
 
 Printing out messages or variable values to the error log is fine for a simple puzzle script. But sometimes we have a non-trivial bug and a bit more complex code or data structure, when such debug output becomes hard to manage.
+
 As we have already installed `php` and `VS Code` locally, by adding `Xdebug` we will be able to:
 
 * Set breakpoints (even conditional ones) in our code using the IDE.
@@ -22,7 +23,7 @@ As we have already installed `php` and `VS Code` locally, by adding `Xdebug` we 
 
 ## Installing Xdebug
 
-Again, I will not go into full details. The necessary steps are depending on OS, but [xdebug website](https://xdebug.org/docs/install) has detailed documentation. The following steps are valid only for my `XAMPP for Windows` installation:
+Again, I will not go into full details. The necessary steps are depending on OS, but [Xdebug website](https://xdebug.org/docs/install) has detailed documentation. The following steps are valid only for my `Windows` installation:
 
 * Download the latest Windows, 64-bit binary from the [download page](https://xdebug.org/download).
     * Match with the major version of your local php installation, e.g. `8.1`.
@@ -33,7 +34,7 @@ Again, I will not go into full details. The necessary steps are depending on OS,
 
 ```ini
 [xdebug]
-xdebug.mode=debug
+xdebug.mode=develop,debug
 xdebug.start_with_request = yes
 xdebug.client_port = 9003
 xdebug.client_host = "127.0.0.1"
@@ -41,7 +42,7 @@ xdebug.log = "C:\xampp\tmp\xdebug.log" ; or your tmp directory
 xdebug.idekey = VSCODE
 ```
 
-In a previous chapter I recommended to enable JIT. Unfortunately JIT and Xdebug does not work well together, so I recommend using TWO separate `php.ini` files:
+In a previous chapter I recommended to enable JIT. Unfortunately JIT and Xdebug does not work well together, so I suggest to use TWO separate `php.ini` files:
 
 The default `php.ini` is used when I don't want to debug, just to run the code (as fast as possible):
 
@@ -67,7 +68,9 @@ php -c %~dp0/php-debug.ini %*
 
 So when I need to debug, I can just type `phpd` instead of `php`.
 
-## Debugging in VS Code
+_Beware: With `xdebug` enabled, your code runs 5x to 10x slower. So use debug mode only when you are really debugging._
+
+## Debugging in `VS Code`
 
 * Add the `PHP Debug` extension to `VS Code` (_see the previous chapter of this playground_)
 * Choose `Run` / `Add configuration...` menu, select "Listen for Xdebug"
@@ -87,6 +90,8 @@ phpd my_solution.php < input_01.txt > output_01.txt 2>&1
 * Note: `php` is replaced with `phpd` the batch file we created above, so it will use the php config file with xdebug enabled.
 * If everything is OK, the execution should pause at the breakpoint, and VS Code shows the line with the breakpoint highlighted.
 * Now you can use all the debug facilities: step over, inspect variable, etc. Find a VS Code tutorial if needed. This part is not specific to php.
+
+Note: besides the Step Debugging feature above Xdebug has additional features, such as Code Coverage Analysis, Garbage Collection Analysis, Profiling, Function Trace. These can be turned on with the `xdebug.mode` setting in the `ini` file, but are beyond our scope, so check the [Xdebug documentation](https://xdebug.org/docs/) for details on how to use them.
 
 ## Useful links
 

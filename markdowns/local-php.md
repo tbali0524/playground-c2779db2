@@ -15,11 +15,16 @@ So, if `CodinGame` provides everything, including a runtime environment, why do 
 
 Depending on your OS, `php` might come already preinstalled, although it might be an older release. Try it out with `php --version`. While at the time of this writing CodinGame shamefully supports only `v7.3` (released in 2018...), for your local environment you should go for the latest stable release (`v8.1`).
 
-* If using `Ubuntu 20.04 LTS` (directly or with `Windows Subsystem for Linux (WSL)`), it came with php `v7.4` only, so there you needed to add an extra repository to upgrade. However, `Ubuntu 22.04 LTS` already contains php `v8.1` so it is best to upgrade the whole OS. Other Linux distros might have different status.
-* For `Windows` you can just download and unzip the latest release from the the [core php site](https://windows.php.net/download). You shall add its directory to the `PATH`, so you can run `php` from anywhere.
-* It might be more convenient to use a pre-packaged version. I use [XAMPP](https://www.apachefriends.org/) that contains some additional useful stuff such as a web server and a database besides PHP itself (not needed for CodinGame puzzles though.) There are other similar packages as well.
+* If using `Ubuntu 20.04 LTS` (directly or with `Windows Subsystem for Linux (WSL)`), it came with php `v7.4` only, so there you needed to add an extra repository to upgrade. However, `Ubuntu 22.04 LTS` already contains php `v8.1` so it is best to upgrade the whole OS. Other Linux distros might have different status regarding php versions.
+* For `Windows` you can just download and unzip the latest release from the [core php site](https://windows.php.net/download).
+    * You shall add its directory to the `PATH`, so you can run `php` from anywhere.
+    * Copy the provided sample settings file `php-development.ini` to `php.ini`.
+    * The extension libraries are disabled by default. In `php.ini` look for the section with `extension=` lines and remove the trailing `;` to enable what you need. For some CG puzzles I needed `mbstring`. Some other useful libraries such as `bcmath` and `ctype` are now part of the core, so always available (if compiled into php).
+    * The default memory setting is too low for some puzzles, increase with `memory_limit=768M` to match the CG environment, or you can even set it to unlimited with `memory_limit=-1`.
+* It might be more convenient to use a pre-packaged version. I use [XAMPP](https://www.apachefriends.org/) that contains some additional useful stuff such as a web server and a database besides PHP itself. (These are not needed for CodinGame puzzles though.) There are other similar packages as well.
+    * You might still need to tweak `php.ini` settings to your liking.
 * `Mac` users: I have no experience with it, so just google it...
-* Using docker containers is also possible.
+* Using a docker containers is also possible, but setting up docker is beyond our scope and a bit overkill for just CG puzzles.
 
 ## Optional: enabling JIT
 
@@ -33,10 +38,7 @@ opcache.enable=1
 opcache.enable_cli=1
 opcache.jit_buffer_size=256M
 opcache.jit=tracing
-opcache.revalidate_freq=1
 ```
-
-While unrelated to JIT, I also recommended to increase the memory available to php, or even to set it to unlimited with `memory_limit=-1`
 
 You can check if JIT is working by running:
 
