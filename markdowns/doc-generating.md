@@ -1,12 +1,14 @@
 # Generating documentation (_phpDocumentor_)
 
-__As your CG puzzle solutions are meant for your own eyes only, this chapter is irrelevent in the context of CodinGame.__
+__Note: As your CG puzzle solutions are meant for your own eyes only, this chapter is irrelevent in the context of CodinGame.__ Therefore, only links are provided.
 
-## Why
+![phpDocumentor logo](../pic/phpdocumentor-logo.png)
 
-If you make code that you share with the world to be used, it is very important to provide proper detailed documentation. Writing documentation is not what many coders dream about, but there are tools that can lessen the burden.
+## Why?
 
-The concept is not to have a completely separate documentation project besides your code repository, but to keep the technical documentation near the code and to generate the interface documentation automatically from your code, using some DocBlocks and the code itself as the source of truth.
+If you make an application or library that you want to share with the world, it is very important to also provide detailed documentation otherwise noone will ant to use what you created. Writing documentation is not what many coders dream about, but there are some nice tools that can lessen the burden.
+
+The concept is not to have a 'documentation project' completely separate from your coding project, but to keep the technical documentation near your code. With the right tool, you can generate the interface documentation automatically from your code, using some DocBlocks and the code itself as the single source of truth.
 
 ## Useful links
 

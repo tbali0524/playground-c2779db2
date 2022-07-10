@@ -1,6 +1,6 @@
 # Unit testing (_PHPUnit, PEST_)
 
-__In CodinGame puzzles the provided test cases already act as some kind of unit testing, so this chapter is not too relevant for CG.__
+__Note. In CodinGame puzzles the provided test cases already act as some kind of unit testing, so this chapter is not too relevant for CG.__ Therefore, only links are provided.
 
 ## PHPUnit
 
