@@ -45,7 +45,7 @@ git config --global init.defaultBranch main
 
 ## Signing up at `GitHub`
 
-Registration on [GitHub](https://www.github.com/) is quite straightforward and you are good to go. Besides the `Free` plan, they also have a paid `Pro` service, but we won't need it. GitHub also provides a [command line tool](https://cli.github.com/) (`gl`), but its usage is optional and not really essential for us.
+Registration on [GitHub](https://www.github.com/) is quite straightforward and you are good to go. Besides the `Free` plan, they also have a paid `Pro` service, but we won't need it. GitHub also provides a [command line tool](https://cli.github.com/) (`gh`), but its usage is optional and not really essential for us.
 
 ## Setting up a code repository for your CG solutions
 

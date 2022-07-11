@@ -91,7 +91,7 @@ _Beware: with `xdebug` enabled, your code runs 5x to 10x slower. So use debug mo
 phpd my_solution.php < input_01.txt > output_01.txt 2>&1
 ```
 
-* Note, that `php` is replaced with `phpd`, the batch file we created above, so it will use the php config file with XDebug enabled.
+* Note, that `php` is replaced with `phpd`, the batch file we created above, so it will use the php config file with Xdebug enabled.
 * If everything is OK, the execution should pause at the breakpoint, and VS Code shows the source code line with the breakpoint highlighted.
 * Now you can use all the debug facilities: step over, inspect variable, etc. Find a VS Code tutorial if needed. This part of VS Code usage is not specific to php.
 

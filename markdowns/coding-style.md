@@ -43,6 +43,7 @@ The above guides are already there, so you don't have to spend too much time on 
 ## Alternative ways of installing a PHP dev tool
 
 Before we go into details about the tools to check and fix the coding style, let's see how can we install a php dev tool _in general_.
+
 __This will be valid also for the other tools to be introduced in later chapters.__
 
 * If using a dependency manager (`Composer`), you can install the tool as a dev-environment-only dependency into your project. It will appear in the `/vendor` subdirectory. (We added this directory name to `.gitignore` exactly to prevent any third-party packages to go into your repository.) However, this approach is not ideal:
@@ -192,7 +193,7 @@ In this case, this is not an _XML_ file, but a short _php script_, which shall b
 
 Here is a possible example, check out the [documentation](https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc) for more details.
 
-* It includes some __'risky'__ rules, such as "always add a `declare(strict_types=1);` line if it was missing". Such change is not just coding style but it alters behaviour and __CAN break your code__, so these should be used very cautiously.
+* It includes some __'risky'__ rules, such as "always add a `declare(strict_types=1);` line if it was missing". Such change is not just coding style, but it alters behaviour and __CAN break your code__, so these should be used very cautiously.
 
 * On top of `PSR-12` it includes the much more opinionated `Symfony` coding standard, however I overrode some rules manually.
 

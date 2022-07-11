@@ -10,7 +10,7 @@ Well, in 95% of the cases we just don't. But it can make sense when:
 
 * If you have a non-obvious bug, it is much easier to __debug__ it in the IDE, using breakpoints, line-by-line execution, variable inspection, etc. _(More details in a later chapter.)_
 * If you have __timeout__ in a CG puzzle, you might want to know how 'far' are you from passing. So run it locally without the time constraint, measure the running time with `hrtime()`, and print it to the console.
-* For some optim puzzles you can pre-calculate some validator results locally without the time constraint, then __hard-code__ it. It means that in the submitted code you just detect the input and send the correct output you already stored in your source as some string. Not a nice thing, feels a bit like a hack. I used this approach only in the [2048 puzzle](https://www.codingame.com/multiplayer/optimization/2048) to try out the approach.
+* For some optim puzzles you can pre-calculate some validator results locally without the time constraint, then __hard-code__ it. It means that in the submitted code you just detect the input and send the correct output you already stored in your source as some string. Not a nice thing, feels a bit like a hack. I tried out this approach only in the [2048 puzzle](https://www.codingame.com/multiplayer/optimization/2048).
 * To improve your bot in [bot programming games](https://www.codingame.com/multiplayer/bot-programming) or contests, you can set up local __self-play__ to try out new things without submitting to the arena. I used this approach to fine-tune some hyper-parameters ('magic constants' for an evaluation function) in my code.
 
 ## Installing `PHP`
@@ -31,7 +31,7 @@ Try it out with `php --version`. While at the time of this writing CodinGame sha
 
 * `Mac` users: I have no experience with it, so just google it...
 
-* Using a docker containers is also possible, but setting up docker is beyond our scope, and I think it is a bit overkill for just solving some CG puzzles.
+* Using Docker containers is also possible, but setting up docker is beyond our scope, and I think it is a bit overkill for just solving some CG puzzles.
 
 ## Optional: enabling JIT
 
