@@ -99,9 +99,9 @@ composer cs-fixer
 
 ...or similarly, run PHPStan with `composer stan`.
 
-Te custom `composer qa` command runs multiple tools after each other. I use it as a 'catch-all' quality assurance command, before I commit my code to my repository at the end of a coding session. It could have been further automated with some CI/CD tools such as `GitHub Actions`, but it is more than enough for me for the CG puzzles.
+The custom `composer qa` command runs multiple tools after each other. I use it as a _'catch-all'_ quality assurance command before I commit my changes to my repository at the end of a coding session. It could have been further automated with some CI/CD tools such as `GitHub Actions`, but it is more than enough for me for the CG puzzles.
 
-_Note:_ the above scripts still assume that the tools' config files are in the main project directory, as we discussed it in earlier chapters.
+_Note:_ the above scripts still assume that the tools' config files are in the main project directory, as we discussed it in earlier chapters. Otherwise you would need more command line arguments.
 
 The `scripts-descriptions` part is fully optional, these descriptions are used only by the `composer list` and `composer help` commands.
 

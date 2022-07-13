@@ -99,7 +99,7 @@ You will get a list of all the rule violations per file, with line numbers and d
 
 You have multiple options to deal with the error messages:
 
-* Review and correct them manually in `VS Code`. This is rather tedious, I would recommend to do it only a few times in the beginning, just to better understand the `PSR-12` coding style requirements. (Soon, you will find that writing conforming code became natural for you, and you will get much less errors from `phpcs` with your newer code.
+* Review and correct them manually in `VS Code`. This is rather tedious, I would recommend to do it only a few times in the beginning, just to better understand the `PSR-12` coding style requirements. Soon, you will find that writing conforming code became natural for you, and you will get much less errors from `phpcs` with your newer code.
 
 * Let CodeSniffer correct them for you automatically. Don't worry, the fixer does not make any modification that would change the behaviour of your code. Only the styling will be changed.
 
@@ -107,11 +107,11 @@ You have multiple options to deal with the error messages:
 phpcbf --standard=PSR12 -p .
 ```
 
-* If you cannot (or don't want to) correct a specific rule violation, you can let `phpcs` know that you want to ignore this error inn the future.
-    * A typical example: with _CodinGame_ your code must be in a single file, so whenever you use functions or classes, you instantly violate the following `PSR-1` rule: _"A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, but should not do both."_
+* If you cannot (or don't want to) correct a specific rule violation, you can let `phpcs` know that you want to ignore this error in the future.
+    * A typical example: With _CodinGame_, your code must be in a single file, so whenever you declare functions or classes, you instantly violate the following `PSR-1` rule: _"A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, but should not do both."_
     * If having multiple classes, another rule is triggered: _"Each class must be in a file by itself"_.
     * Adding the following line to the top of your source file (after the opening `<?php` tag) makes these errors go away:
-        * _(Note: The name of the rule to disable was shown in the error message.)_
+        * _(Note: The name of the rule to disable was shown in the error message, that is why we added `-s` when we invoked `phpcs`.)_
 
 ```php
 // phpcs:disable PSR1.Files.SideEffects, PSR1.Classes.ClassDeclaration.MultipleClasses
@@ -161,7 +161,7 @@ Having this file in your project directory, you can simply run `phpcs` without a
 
 [PHP Coding Standards Fixer](https://cs.symfony.com/) is another popular solution to check and fix the coding style. It has similar features to PHP CodeSniffer, so I will be brief.
 
-* Again, as discussed above, there are multiple ways to install the tool. I download the `Phar` file, move it to my `c:\devtools` directory, and create a `php-cs-fixer.bat` helper:
+* Again, as discussed above, there are multiple ways to install the tool. Download the `Phar` file, move it to the `c:\devtools` directory, and create a `php-cs-fixer.bat` helper:
 
 ```bash
 curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer.phar
@@ -193,7 +193,7 @@ In this case, this is not an _XML_ file, but a short _php script_, which shall b
 
 Here is a possible example, check out the [documentation](https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/master/doc) for more details.
 
-* It includes some __'risky'__ rules, such as "always add a `declare(strict_types=1);` line if it was missing". Such change is not just coding style, but it alters behaviour and __CAN break your code__, so these should be used very cautiously.
+* It includes some __'risky'__ rules, such as _"always add a `declare(strict_types=1);` line if it was missing"_. Such change is not just coding style, but it alters behaviour and __CAN break your code__, so these should be used very cautiously.
 
 * On top of `PSR-12` it includes the much more opinionated `Symfony` coding standard, however I overrode some rules manually.
 

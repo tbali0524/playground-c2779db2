@@ -24,7 +24,7 @@ The list below might be incomplete, please __let me know if something worth ment
     * Puzzles solved by Codingamers with a level of 40+
     * List of puzzles
     * List of tags
-* [CG puzzle search](https://eulerschezahl.herokuapp.com/codingame/puzzles/) by [eulerscheZalh](https://www.codingame.com/profile/8374201b6f1d19eb99d61c80351465b65150051)
+* [CG puzzle search](https://eulerschezahl.herokuapp.com/codingame/puzzles/) by [eulerscheZahl](https://www.codingame.com/profile/8374201b6f1d19eb99d61c80351465b65150051)
     * Search puzzles by anything
     * Reproduce replays
 * [CG stats](http://cgstats.magusgeek.com/app) by [Magus](https://www.codingame.com/profile/1724dffd64c8c26c9fa9a189691387b5760508)
@@ -36,6 +36,7 @@ The list below might be incomplete, please __let me know if something worth ment
 * [CG leadergraph](https://dbdr.github.io/cg/) by [dbdr](https://www.codingame.com/profile/a44c2c75eb5da8d5e52184eaa92342813628822)
     * Graphical CP leaderboard for top200 players - _currently broken_
 * [Chat history](https://cg.spdns.eu/wiki/Main_Page) by `???` _(sorry, I don't know who is the culprit)_
+    * _Note: the built-in WebChat was recently removed from the CG site_
 
 ## Useful links
 

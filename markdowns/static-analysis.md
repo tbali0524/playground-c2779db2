@@ -14,7 +14,7 @@ This doesn't make too much difference at a solo CG puzzle, but can be problemati
 
 A _static code analyser tool_ scans the codebase for possible errors WITHOUT running the code.
 It can detect much more than just syntax errors: type juggling, invalid assumptions on function return types, and lots of other code smells.
-It does NOT replaces proper testing, but complements it.
+It does NOT replace proper testing, but complements it.
 
 There are several great code analyser tools available, in this playground we will use `PHPStan`.
 _(See the links section at the bottom for some others.)_
@@ -45,7 +45,7 @@ When running the first time against some old code, most likely there will be TON
 
 The best approach is this:
 
-* Start with the lowest rule level by ising the command line argument `--level 0`. Now only the most basic rules are checked.
+* Start with the lowest rule level by using the command line argument `--level 0`. Now only the most basic rules are checked.
 * Go over the error messages one by one. Either modify your code to conform, or add some exceptions _(see later)_.
 * When your code passes at this rule level, increase the level setting, rinse and repeat.
 * The maximum level is 9, with some quite strict rules, but it is absolutely OK to stop the process earlier.
@@ -58,9 +58,9 @@ While static analysis can help any code, for maximum benefit you shall start to 
 * Use `declare(strict_types=1);` and adhere to it.
 * Use type hints for all function parameters and function return types.
 * Use property types in classes. This is supported only from `v7.4`, so for a CG puzzle code that must run with php `v7.3`, you can use `/** @var ... */` [PHPDocs](https://phpstan.org/writing-php-code/phpdocs-basics) (also known as _DocBlocks_) to declare the type of the property. While the information in such PHPDocs is not enforced by the interpreter at runtime (treated as a comment), `phpstan` uses it during its analysis, and checks whether a value of an other type is ever assigned to that property or not.
-* Many library functions can return _false_ as an error condition (e.g. `str_pos()`, but even `stream_get_line()`). You must always check the return value before assigning it to a property, or pass it to a function, that was not meant to receive a boolean value.
-    * That means that even an innocent `$a = explode(' ', stream_get_line(STDIN, 256, "\n"));` input parsing line in a CG puzzle is not a "clean code". While we _know_ that `stream_get_line()` would never fail in a CG puzzle, the analyser will _not_, and warns you that `explode()` expects a _string_ as its second parameter and not a _string|bool_. The easiest way to deal with this is to add an `?: '0'` after the `stream_get_line()` call, so phpstan will now deduct, that even a _false_ return value would be converted to _string_ and no harm can happen.
-* The php `array` is a very flexible type, but using the `array` word in type hints does not tell much about its actual contents. At high rule levels, you need to add an additional `PHPDocs` block to define the array's real _shape_. For example, `int[]` is a vector of integers, while `array<string, float>` is an associative array, where the keys are strings and the values are floats. More complex shapes are also supported. At first, doing this feels tedious, but the additional analysing capability can prevent many bugs. _(And you might start feeling like you are coding in Java... :-) )_
+* Many library functions can return _false_ as an error condition (e.g. `str_pos()`, but even `stream_get_line()`). You must always check the return value before assigning it to a property, or pass it to a function that was not meant to receive a boolean value.
+    * That means that even an innocent `$a = explode(' ', stream_get_line(STDIN, 256, "\n"));` input parsing line in a CG puzzle is not a "clean code". While we _know_ that `stream_get_line()` would never fail in a CG puzzle, the analyser will _not_, and warns you that `explode()` expects a _string_ as its second parameter and not a _string|bool_. The easiest way to deal with this is to add an `?: '0'` after the `stream_get_line()` call, so phpstan will now deduct that a _false_ return value would be converted to _string_, and no harm can happen.
+* The php `array` is a very flexible type, but using the `array` word in type hints does not tell much about its actual contents. At high rule levels, you need to add an additional `PHPDocs` block to define the array's real _shape_. For example, `int[]` is a vector of integers, while `array<string, float>` is an associative array where the keys are strings and the values are floats. More complex shapes are also supported. At first, doing this feels tedious, but the additional analysing capability can prevent many bugs. _(And you might start feeling like you are coding in Java... :-) )_
 * In many CG puzzle codes, I made debug logging toggleable by using a global `const DEBUG = true;` line, then later using `if (DEBUG) { error_log('...'); }` conditionals. At some rule level, `phpstan` will figure out that the condition is always _true_ (or _false_) and will complain. You can silence such 'false positives' by adding a `// @phpstan-ignore-next-line` line to your source. Another possibility is to add the constant to a `dynamicConstantNames` entry in your config file _(see below)_.
 
 ## Custom configuration file for `PHPStan`
