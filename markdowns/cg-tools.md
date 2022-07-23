@@ -15,6 +15,9 @@ The list below might be incomplete, please __let me know if something worth ment
     * A Java tool to queue batches of matches on any multiplayer game.
 * [CG-BrutalTester](https://github.com/dreignier/cg-brutaltester) by [Magus](https://www.codingame.com/profile/1724dffd64c8c26c9fa9a189691387b5760508)
     * A Java local tool to simulate the CodinGame multiplayer arena.
+* [CGTest](https://github.com/tbali0524/cgtest) by [myself](https://www.codingame.com/profile/08e6e13d9f7cad047d86ec4d10c777500155033)
+    * A multi-language offline batch test runner for CodinGame (or other) solo I/O puzzles.
+    * _Sorry for the shameless self-promotion, but maybe someone might find also this tool of some use…_
 
 ## Sites
 
